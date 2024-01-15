@@ -1,0 +1,239 @@
+<mxfile host="app.diagrams.net" modified="2024-01-15T06:32:38.235Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15" etag="GAimmEYp_GR8sDWFoV3_" version="22.1.18" type="github">
+  <diagram name="Page-1" id="13e1069c-82ec-6db2-03f1-153e76fe0fe0">
+    <mxGraphModel dx="1434" dy="802" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="7baba1c4bc27f4b0-2" value="external-server" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
+          <mxGeometry x="240" y="80" width="100" height="2670" as="geometry" />
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-5" value="获取pool元数据列表" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="7baba1c4bc27f4b0-2">
+          <mxGeometry x="0.0985" width="80" relative="1" as="geometry">
+            <mxPoint x="-100" y="90" as="sourcePoint" />
+            <mxPoint x="209.5" y="90" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7baba1c4bc27f4b0-3" value="rds" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
+          <mxGeometry x="400" y="80" width="100" height="2670" as="geometry" />
+        </mxCell>
+        <mxCell id="7baba1c4bc27f4b0-8" value="schedule-engine-server" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
+          <mxGeometry x="91" y="80" width="100" height="2680" as="geometry" />
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-1" value="redis" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" vertex="1" parent="1">
+          <mxGeometry x="570" y="80" width="100" height="2680" as="geometry" />
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-6" value="返回pool元数据列表" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1" target="7baba1c4bc27f4b0-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="450" y="200" as="sourcePoint" />
+            <mxPoint x="370" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-7" value="Loop" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="220" width="770" height="2610" as="geometry" />
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-8" value="根据pool_id加锁" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="140" y="467" as="sourcePoint" />
+            <mxPoint x="619.5" y="467" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-9" value="返回加锁结果" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="490" as="sourcePoint" />
+            <mxPoint x="140.5" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-10" value="Alt" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=170;" vertex="1" parent="1">
+          <mxGeometry x="81" y="510" width="680" height="2260" as="geometry" />
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-11" value="[加锁失败]" style="text;html=1;" vertex="1" parent="H7e3Fgk0VacpWG7pDPID-10">
+          <mxGeometry width="100" height="20" relative="1" as="geometry">
+            <mxPoint x="20" y="40" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-12" value="[加锁成功]" style="line;strokeWidth=1;dashed=1;labelPosition=center;verticalLabelPosition=bottom;align=left;verticalAlign=top;spacingLeft=20;spacingTop=15;html=1;whiteSpace=wrap;" vertex="1" parent="H7e3Fgk0VacpWG7pDPID-10">
+          <mxGeometry y="140" width="680" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-14" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="H7e3Fgk0VacpWG7pDPID-10">
+          <mxGeometry x="56" y="95" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-15" value="continue" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="H7e3Fgk0VacpWG7pDPID-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="62" y="75" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="92" y="105" />
+            </Array>
+            <mxPoint x="72" y="105" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-18" value="Alt" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=170;" vertex="1" parent="H7e3Fgk0VacpWG7pDPID-10">
+          <mxGeometry x="20" y="300" width="630" height="890" as="geometry" />
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-19" value="[已开机数量+开机中数量&amp;lt;预期开机数量]" style="text;html=1;" vertex="1" parent="H7e3Fgk0VacpWG7pDPID-18">
+          <mxGeometry width="100" height="20" relative="1" as="geometry">
+            <mxPoint x="20" y="40" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-20" value="[当前开机数量-关机中数量&amp;gt;预期开机数量]" style="line;strokeWidth=1;dashed=1;labelPosition=center;verticalLabelPosition=bottom;align=left;verticalAlign=top;spacingLeft=20;spacingTop=15;html=1;whiteSpace=wrap;" vertex="1" parent="H7e3Fgk0VacpWG7pDPID-18">
+          <mxGeometry y="390" width="630" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-29" value="获取已关机实例（&amp;lt;=需开机数量）" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="H7e3Fgk0VacpWG7pDPID-18">
+          <mxGeometry x="-0.0501" y="8" width="80" relative="1" as="geometry">
+            <mxPoint x="43" y="178" as="sourcePoint" />
+            <mxPoint x="352.5" y="178" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-35" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="H7e3Fgk0VacpWG7pDPID-18">
+          <mxGeometry x="37" y="110" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-36" value="需开机数量=预期-已开机-开机中" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="H7e3Fgk0VacpWG7pDPID-18">
+          <mxGeometry x="0.0123" relative="1" as="geometry">
+            <mxPoint x="42" y="91" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="72" y="121" />
+            </Array>
+            <mxPoint x="51" y="121" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-37" value="返回已关机实例" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="H7e3Fgk0VacpWG7pDPID-18" target="7baba1c4bc27f4b0-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="350" y="210" as="sourcePoint" />
+            <mxPoint x="270" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-45" value="将这一批实例设置为开机中" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="H7e3Fgk0VacpWG7pDPID-18">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="37" y="320" as="sourcePoint" />
+            <mxPoint x="346.5" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-46" value="设置开机中完成" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="H7e3Fgk0VacpWG7pDPID-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="346.5" y="360" as="sourcePoint" />
+            <mxPoint x="37" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-47" value="批量开机请求" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="H7e3Fgk0VacpWG7pDPID-18">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="43" y="240" as="sourcePoint" />
+            <mxPoint x="190.5" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-50" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="H7e3Fgk0VacpWG7pDPID-18">
+          <mxGeometry x="36" y="480" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-51" value="需关机数量=已开机-预期-关机中" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" target="H7e3Fgk0VacpWG7pDPID-50" parent="H7e3Fgk0VacpWG7pDPID-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="46" y="460" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="76" y="490" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-52" value="获取已开机实例（&amp;lt;=需关机数量）" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="H7e3Fgk0VacpWG7pDPID-18">
+          <mxGeometry x="-0.0501" y="8" width="80" relative="1" as="geometry">
+            <mxPoint x="39" y="540" as="sourcePoint" />
+            <mxPoint x="348.5" y="540" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-53" value="返回已开机实例" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="H7e3Fgk0VacpWG7pDPID-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="347" y="570" as="sourcePoint" />
+            <mxPoint x="37" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-54" value="将这一批实例设置为关机中" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="H7e3Fgk0VacpWG7pDPID-18">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="37" y="726" as="sourcePoint" />
+            <mxPoint x="347" y="726" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-55" value="设置关机中完成" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="H7e3Fgk0VacpWG7pDPID-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="346" y="774" as="sourcePoint" />
+            <mxPoint x="37" y="774" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-56" value="将这一批实例移出实例池" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="H7e3Fgk0VacpWG7pDPID-18">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="37" y="817" as="sourcePoint" />
+            <mxPoint x="347" y="817" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-58" value="请求已接受" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="H7e3Fgk0VacpWG7pDPID-18" target="7baba1c4bc27f4b0-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="189" y="280" as="sourcePoint" />
+            <mxPoint x="109" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-57" value="移出实例池完成" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="H7e3Fgk0VacpWG7pDPID-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="349" y="859" as="sourcePoint" />
+            <mxPoint x="40" y="859" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-59" value="批量关机实例" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="H7e3Fgk0VacpWG7pDPID-18">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="39" y="624" as="sourcePoint" />
+            <mxPoint x="188.5" y="624" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-60" value="关机请求已接受" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="H7e3Fgk0VacpWG7pDPID-18" target="7baba1c4bc27f4b0-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="189" y="670" as="sourcePoint" />
+            <mxPoint x="109" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-25" value="获取已开机和开机中数量" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="H7e3Fgk0VacpWG7pDPID-10" target="7baba1c4bc27f4b0-3">
+          <mxGeometry x="0.0016" width="80" relative="1" as="geometry">
+            <mxPoint x="60" y="210" as="sourcePoint" />
+            <mxPoint x="140" y="210" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-26" value="返回已开机和开机中数量" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="H7e3Fgk0VacpWG7pDPID-10" target="7baba1c4bc27f4b0-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="250" as="sourcePoint" />
+            <mxPoint x="290" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-32" value="释放锁" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="H7e3Fgk0VacpWG7pDPID-10">
+          <mxGeometry x="0.001" width="80" relative="1" as="geometry">
+            <mxPoint x="60" y="1233" as="sourcePoint" />
+            <mxPoint x="539.5" y="1233" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-33" value="释放锁完成" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="H7e3Fgk0VacpWG7pDPID-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="539.5" y="1273" as="sourcePoint" />
+            <mxPoint x="60" y="1273" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-41" value="Alt" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="101" y="250" width="419" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-42" value="[上次调节时间+间隔&amp;gt;当前时间]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="111" y="280" width="119" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-43" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="138" y="360" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="H7e3Fgk0VacpWG7pDPID-44" value="continue" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" target="H7e3Fgk0VacpWG7pDPID-43" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="143" y="340" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="173" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
